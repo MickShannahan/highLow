@@ -1,0 +1,18 @@
+.f-pixel {
+  font-size: 20px;
+  font-family: "Jersey 10", sans-serif;
+  font-style: normal;
+}
+
+
+body {
+  /* Forces the body to be as big as the window */
+  min-height: 100dvh;
+  display: flex;
+  /* allows the body to grow with main's flex grow*/
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
