@@ -69,7 +69,7 @@ function restart() {
   cardElm.classList.remove('flipped')
   number = Math.round(Math.random() * numMax)
   lowest = 0
-  highest == numMax + 1
+  highest = numMax + 1
   drawButtons()
   guessesElm.innerHTML = ''
   setTimeout(() => {
