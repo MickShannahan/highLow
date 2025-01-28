@@ -1,18 +1,99 @@
+:root {
+  --neutral-light: rgb(209, 209, 209);
+  --neutral: grey;
+  --neutral-dark: rgb(92, 92, 92);
+  --primary: rgb(28, 81, 255);
+  --secondary: rgb(106, 13, 143);
+}
+
+body {
+  /* removes white border around page */
+  margin: 0;
+  /* Forces the body to be as big as the window */
+  min-height: 100dvh;
+  /* allows the body to grow with main's flex grow*/
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer>* {
+  margin-inline: 1.5em;
+}
+
+a {
+  text-decoration: none !important;
+  color: var(--primary);
+}
+
 .f-pixel {
   font-size: 20px;
   font-family: "Jersey 10", sans-serif;
   font-style: normal;
 }
 
-
-body {
-  /* Forces the body to be as big as the window */
-  min-height: 100dvh;
-  display: flex;
-  /* allows the body to grow with main's flex grow*/
-  flex-direction: column;
+.bg-neutral-light {
+  background-color: var(--neutral-light);
 }
 
-main {
-  flex-grow: 1;
+
+.mystery-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.mystery-card {
+  width: 250px;
+  height: 355px;
+  position: relative;
+  perspective: 5px;
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.mystery-card.flipped {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--neutral-light);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.back {
+  filter: hue-rotate(190deg);
+}
+
+.front {
+  background: rgb(248, 247, 247);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 25px;
+
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80ch;
+  margin-inline: auto;
+}
+
+.guess-button {
+  width: 5%;
+  border: none;
+  background-color: var(--neutral-light);
 }
