@@ -1,7 +1,7 @@
 
 
 
-let numMax = 1000
+let numMax = 20
 
 let number = Math.round(Math.random() * numMax)
 

@@ -14,6 +14,8 @@ body {
   /* allows the body to grow with main's flex grow*/
   display: flex;
   flex-direction: column;
+  background-color: green;
+  background-image: url(/imgs/45-degree-fabric-dark.png);
 }
 
 main {
@@ -93,6 +95,7 @@ a {
 }
 
 .guess-button {
+  background-color: black;
   width: 5%;
   border: none;
   background-color: var(--neutral-light);
